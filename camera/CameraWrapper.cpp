@@ -147,10 +147,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     bool isVideo = recordingHint && !strcmp(recordingHint, "true");
 
     if (isVideo) {
-        params.set(android::CameraParameters::KEY_DIS, android::CameraParameters::DIS_DISABLE);
-        params.set(android::CameraParameters::KEY_ZSL, android::CameraParameters::ZSL_OFF);
-    } else {
-        params.set(android::CameraParameters::KEY_ZSL, android::CameraParameters::ZSL_ON);
+    } else {    
     }
 
     android::String8 strParams = params.flatten();
